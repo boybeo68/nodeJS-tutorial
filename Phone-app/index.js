@@ -1,14 +1,16 @@
 const express = require("express");
 var morgan = require("morgan");
-
 var phone = require("./routes/phone.route");
+var web = require("./routes/phone.web");
 const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })) 
 app.use("/", phone);
+app.use("/web", web);
 app.use(express.static("public"));
-app.use(morgan(" :method :url :date[iso] - :body"));
+app.use(morgan(" :method :url :date[iso]"));
 
 app.set("view engine", "pug");
 app.set("views", "./views");

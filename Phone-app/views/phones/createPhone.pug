@@ -1,3 +1,17 @@
 extend ../layout/common
 block content
-    h3= message
+    .container.mt-5
+        if error
+            each val in error 
+                .alert.alert-danger=val
+        form(action='/web/create/person', method='post')
+            .form-group
+                label(for='exampleInputEmail1') Name
+                input#exampleInputEmail1.form-control(type='text', name='name', value=name)
+                small#emailHelp.form-text.text-muted Require.
+            .form-group
+                label(for='exampleInputPassword1') Phone
+                input#exampleInputPassword1.form-control(type='number', name='number', value=number)
+            .form-group.form-check
+                button.btn.btn-primary(type='submit') Submit
+
