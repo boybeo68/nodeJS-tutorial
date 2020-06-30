@@ -1,13 +1,17 @@
 const express = require("express");
 var morgan = require("morgan");
-const app = express();
+
 var phone = require("./routes/phone.route");
+const cors = require("cors");
+
+const app = express();
 app.use(express.json());
+app.use("/", phone);
+app.use(express.static("public"));
+app.use(morgan(" :method :url :date[iso] - :body"));
+
 app.set("view engine", "pug");
 app.set("views", "./views");
-const cors = require('cors')
-app.use(morgan(" :method :url :date[iso] - :body"));
-app.use("/", phone);
 morgan.token("body", (req, res) => JSON.stringify(req.body));
 const port = 3000;
 // middleware
