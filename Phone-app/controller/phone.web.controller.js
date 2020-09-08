@@ -3,11 +3,15 @@ const shortid = require("shortid");
 const db = require("../db");
 const data = db.get("phone");
 
-
 module.exports.getPerson = (req, res) => {
+  console.log(req.cookies);
   res.render("phones/createPhone", {
     message: "tung",
   });
+};
+module.exports.sendCookie = (req, res, next) => {
+  res.cookie("access_token", "Bearer");
+  res.send("hello");
 };
 module.exports.postPerson = (req, res) => {
   const body = req.body;
