@@ -4,7 +4,6 @@ const db = require("../db");
 const data = db.get("phone");
 
 module.exports.getPerson = (req, res) => {
-  console.log(req.cookies);
   res.render("phones/createPhone", {
     message: "tung",
   });
