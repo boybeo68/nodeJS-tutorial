@@ -1,10 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const db = require("../db");
-const data = db.get("phone");
 const validate = require("../middleware/validate");
-const authenication = require("../middleware/authenication");
-
 const controller = require("../controller/phone.web.controller");
 router.get("/create/person", controller.getPerson);
 router.get("/cookie", controller.sendCookie);
