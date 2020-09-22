@@ -1,9 +1,11 @@
 require('dotenv').config()
 const express = require("express");
+let ejs = require('ejs');
 var morgan = require("morgan");
 var cookieParser = require("cookie-parser");
 var phone = require("./routes/phone.route");
 var web = require("./routes/phone.web");
+var products = require("./routes/products.web.route");
 var loginRoute = require("./routes/auth.route");
 var authenication = require("./middleware/authenication");
 const cors = require("cors");
@@ -14,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use("/", phone);
 app.use("/web", authenication.authenToken, web);
+app.use("/products", products);
 app.use("/login", loginRoute);
 app.use(express.static("public"));
 

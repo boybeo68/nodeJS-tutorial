@@ -1,0 +1,35 @@
+extend ../layout/common
+block content
+        .container
+            h1 Products list
+            .row
+                mixin article(val)
+                    .col
+                        .card.my-4(style='width: 18rem; height: 500px')
+                            img.card-img-top(src=val.avata, alt='girl xinh')
+                            .card-body
+                                h5.card-title #{val.name}
+                                p.card-text
+                                | #{val.description}
+                +article(products[0])
+                +article(products[1])
+                +article(products[2])
+            .row
+                +article(products[3])
+                +article(products[4])
+                +article(products[5])
+
+            nav(aria-label='Page navigation example')
+            ul.pagination.d-flex.justify-content-center
+                li.page-item
+                a.page-link(href='#0') Previous
+                li.page-item
+                a.page-link(href='#1') 1
+                li.page-item
+                a.page-link(href='#2') 2
+                li.page-item
+                a.page-link(href='#3') 3
+                li.page-item
+                a.page-link(href='#') Next
+
+
