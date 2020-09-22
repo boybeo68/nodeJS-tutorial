@@ -657,6 +657,12 @@
       "name": "Romance",
       "avata": "https://robohash.org/officiisoptiomagni.png?size=300x300&set=set1",
       "description": "Unit Dose Services"
+    },
+    {
+      "id": 101,
+      "name": "Horror",
+      "avata": "https://robohash.org/etnesciuntdebitis.png?size=300x300&set=set1",
+      "description": "Pharmacia and Upjohn Company"
     }
   ]
 }

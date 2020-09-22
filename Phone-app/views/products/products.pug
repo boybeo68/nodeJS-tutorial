@@ -2,34 +2,27 @@ extend ../layout/common
 block content
         .container
             h1 Products list
-            .row
+            .row(style='display: grid;grid-template-columns:repeat(4, 1fr);grid-gap: 16px;')
                 mixin article(val)
                     .col
-                        .card.my-4(style='width: 18rem; height: 500px')
+                        .card.my-4(style='width: 15rem; height: 450px')
                             img.card-img-top(src=val.avata, alt='girl xinh')
                             .card-body
                                 h5.card-title #{val.name}
                                 p.card-text
                                 | #{val.description}
-                +article(products[0])
-                +article(products[1])
-                +article(products[2])
-            .row
-                +article(products[3])
-                +article(products[4])
-                +article(products[5])
+                each pro in products
+                    +article(pro)
 
-            nav(aria-label='Page navigation example')
+            nav(aria-label='Page navigation example')    
             ul.pagination.d-flex.justify-content-center
                 li.page-item
-                a.page-link(href='/products/page=1') Previous
+                    a.page-link(href='#') Previous
+                - var i = 1;
+                while i <= totalPage
+                    li.page-item
+                        a.page-link(href=`?page=${i}`)= i++
                 li.page-item
-                a.page-link(href='/products/page=2') 1
-                li.page-item
-                a.page-link(href='/products/page=3') 2
-                li.page-item
-                a.page-link(href='/products/page=4') 3
-                li.page-item
-                a.page-link(href='/products/page=5') Next
+                    a.page-link(href='#') Next
 
 
