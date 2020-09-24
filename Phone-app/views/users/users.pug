@@ -1,0 +1,25 @@
+extend ../layout/common
+block content
+    .container.mt-5
+        h1 List User
+        button.btn.btn-info.mb-5(type='button')
+            a(href='/web/create/person', style='color: inherit') Add User
+        button.btn.btn-info.mb-5.ml-5(type='button')
+            a(href='/products', style='color: inherit') Products List
+        table.table
+            thead
+                tr
+                    th(scope='col') #
+                    th(scope='col') avatar
+                    th(scope='col') Name
+                    th(scope='col') Phone
+            tbody
+                each user,index in users
+                    tr
+                        th(scope='row')=index+1
+                        td 
+                            <img src="https://picsum.photos/50" class="rounded mx-auto d-block" alt="avatar">
+                        td #{user.name}
+                        td #{user.number}
+                        td
+                            button.btn.btn-primary(type='button') View

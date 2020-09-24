@@ -26,5 +26,5 @@ module.exports.postPerson = (req, res) => {
     id: shortid.generate(),
   };
   data.push(phone).write();
-  res.json(phone);
+  res.redirect("/");
 };

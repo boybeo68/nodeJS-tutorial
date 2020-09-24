@@ -1,10 +1,11 @@
 extend ../layout/common
 block content
     .container.mt-5
+        h1 Create users 
         if error
             each val in error 
                 .alert.alert-danger=val
-        form(action='/web/create/person', method='post')
+        form(action='/web/create/person',enctype="multipart/form-data" ,method='post')
             .form-group
                 label(for='exampleInputEmail1') Name
                 input#exampleInputEmail1.form-control(type='text', name='name', value=name)
@@ -12,6 +13,9 @@ block content
             .form-group
                 label(for='exampleInputPassword1') Phone
                 input#exampleInputPassword1.form-control(type='number', name='number', value=number)
+            .form-group
+                label(for='exampleInputPassword1') Avatar
+                input.form-control-file(type='file', name='avatar', value=avatar)
             .form-group.form-check
                 button.btn.btn-primary(type='submit') Tạo tài khoản
 
