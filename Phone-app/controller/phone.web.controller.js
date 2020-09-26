@@ -14,6 +14,7 @@ module.exports.sendCookie = (req, res, next) => {
 };
 module.exports.postPerson = (req, res) => {
   const body = req.body;
+  let avatar = req.file.path.split("/").slice(1).join("/");
   const findName = data.find({ name: body.name }).value();
   if (findName) {
     return res.status(400).json({
@@ -23,8 +24,10 @@ module.exports.postPerson = (req, res) => {
   const phone = {
     name: body.name,
     number: body.number,
+    password: body.password,
+    avatar,
     id: shortid.generate(),
   };
-  data.push(phone).write();
+  data.unshift(phone).write();
   res.redirect("/");
 };

@@ -30,6 +30,6 @@ module.exports.login = (req, res) => {
       password: body.password ? body.password : "",
     });
   }
-  res.cookie("access_token", findName.id);
+  res.cookie("access_token", findName.id, { signed: true });
   res.redirect("/");
 };

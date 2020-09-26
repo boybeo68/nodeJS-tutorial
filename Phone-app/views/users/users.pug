@@ -18,7 +18,10 @@ block content
                     tr
                         th(scope='row')=index+1
                         td 
-                            <img src="https://picsum.photos/50" class="rounded mx-auto d-block" alt="avatar">
+                            if user.avatar
+                                img(src=user.avatar, alt="avatar", width="50")
+                            else
+                                img(src="https://picsum.photos/50", alt="avatar", width="50")
                         td #{user.name}
                         td #{user.number}
                         td

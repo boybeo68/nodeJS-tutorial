@@ -1,85 +1,27 @@
 {
   "phone": [
     {
-      "name": "dfsdf",
-      "number": "2324234324",
-      "id": "bXPkrI9Ht"
+      "name": "tungdfs",
+      "number": "2323",
+      "password": "123123",
+      "avatar": "uploads/340cda2a743b5608a1bea62630bd880c",
+      "id": "8M0fzSymZ"
     },
     {
-      "name": "thanh vien moi",
-      "number": "123123",
-      "id": "T5-gPmz4L"
-    },
-    {
-      "name": "fdsfsdf",
-      "number": "",
-      "id": "WOYdCXHHV"
-    },
-    {
-      "name": "123123213213",
-      "number": "123213",
-      "id": "xxAcAzpBo"
-    },
-    {
-      "name": "ngay moi hoan thanh ",
-      "number": "123123123",
-      "id": "3C9GuJvSv"
-    },
-    {
-      "name": "dfdsf",
-      "number": "23123",
-      "id": "4x0F7TRw4"
-    },
-    {
-      "name": "tun3333",
-      "number": "732498",
-      "id": "306LBPv99"
-    },
-    {
-      "name": "tun222",
-      "number": "732498",
-      "id": "zxeIpExpO"
-    },
-    {
-      "name": "Test",
-      "number": "732498",
-      "id": "hf_5RZX8q"
-    },
-    {
-      "name": "My",
-      "number": "732498",
-      "id": "OtqogPbKh"
-    },
-    {
-      "name": "Hoang",
-      "number": "732498",
-      "id": "BjL8AZiiC"
-    },
-    {
-      "name": "Ly",
-      "number": "123123123",
-      "id": "MYacsntI9"
+      "name": "tung2",
+      "number": [
+        "123123",
+        "123123"
+      ],
+      "avatar": "uploads/d89bd0c3748e77d5aaf1e8c15344b106",
+      "id": "ijIQ06JgY"
     },
     {
       "name": "tung",
-      "number": "09090909",
-      "id": "2fDKLbmof",
-      "password": "123456"
-    },
-    {
-      "name": "new",
       "number": "123123",
-      "id": "R8l1G1vZa"
-    },
-    {
-      "name": "tung 2 ",
-      "number": "123123",
-      "id": "91HTzOmRi"
-    },
-    {
-      "name": "tung 3",
-      "number": "123123",
-      "id": "f-Ce4d1BN"
+      "password": "123456",
+      "avatar": "uploads/1240e2803d2a29693034ad2ea2eb0036",
+      "id": "RITgIzt_f"
     }
   ],
   "product": [
