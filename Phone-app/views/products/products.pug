@@ -11,6 +11,8 @@ block content
                                 h5.card-title #{val.name}
                                 p.card-text
                                 | #{val.description}
+                                br
+                                a.btn.btn-primary(href="/products/cart/add/" + val.id) Add to Cart
                 each pro in products
                     +article(pro)
 
