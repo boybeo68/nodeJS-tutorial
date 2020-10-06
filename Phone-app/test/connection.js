@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 
 // Connect to mongodb
 before(function (done) {
-  mongoose.connect("mongodb://localhost/testdb");
+  mongoose.connect('mongodb+srv://tung2:t1vo37a4fv0psqQC@cluster0.fby82.mongodb.net/firstdb?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
   mongoose.connection
     .once("open", function () {
